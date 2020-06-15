@@ -13,16 +13,26 @@ header {
 
 .content {
   margin-top: 1em;
-  margin-bottom: $footer-height + 1em;
+  margin-bottom: 1.5em;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   .content__menu {
-    width: 250px;
-    height: 400px;
+    width: $box-w;
+    height: $box-h;
 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+.btn {
+  text-align: center;
+  .prochainement {
+    width: 180px;
+    padding: 0.4em 1.6em;
+    border-radius: 8px;
+    margin: auto;
+    background-color: $color-green;
   }
 }
 

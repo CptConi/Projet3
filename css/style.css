@@ -11,7 +11,7 @@ header h1 {
 
 .content {
   margin-top: 1em;
-  margin-bottom: 4em;
+  margin-bottom: 1.5em;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -19,8 +19,19 @@ header h1 {
 }
 .content .content__menu {
   width: 250px;
-  height: 400px;
+  height: 350px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  text-align: center;
+}
+.btn .prochainement {
+  width: 180px;
+  padding: 0.4em 1.6em;
+  border-radius: 8px;
+  margin: auto;
+  background-color: #579c87;
 }
 
 footer {
@@ -37,13 +48,23 @@ footer ul {
 }
 
 h1 {
-  font-family: "Roboto", sans-serif;
-  letter-spacing: -0.07em;
-  color: #fdcb46;
-  font-weight: bolder;
   text-align: center;
+}
+h1 a {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.06em;
+  text-decoration: none;
+  color: #fdcb46;
+  font-weight: bold;
   text-transform: lowercase;
   font-size: 46px;
+}
+
+.prochainement {
+  color: #fdcb46;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
 }
 
 footer {

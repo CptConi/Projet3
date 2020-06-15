@@ -1,13 +1,23 @@
 h1 {
-  font-family: "Roboto", sans-serif;
-  letter-spacing: -0.07em; // Spacing between two letters.
-
-  color: $color-yellow;
-  font-weight: bolder;
   text-align: center;
-  text-transform: lowercase;
+  a {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: -0.06em; // Spacing between two letters.
+    text-decoration: none;
 
-  font-size: 46px;
+    color: $color-yellow;
+    font-weight: bold;
+    text-transform: lowercase;
+
+    font-size: 46px;
+  }
+}
+
+.prochainement {
+  color: $color-yellow;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
 }
 
 footer {
