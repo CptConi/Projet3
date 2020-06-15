@@ -10,8 +10,8 @@ header h1 {
 }
 
 .content {
-  margin-top: 1em;
-  margin-bottom: 1.5em;
+  margin-top: 3em;
+  margin-bottom: 5em;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -20,7 +20,42 @@ header h1 {
 .content .content__menu {
   width: 250px;
   height: 350px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.content .content__menu--note {
+  background-color: #fcdfdb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.content .content__menu--note .fa-itunes-note {
+  background-image: linear-gradient(to right, #f04a5e, #f35e5e, #f56f60, #f68064, #f78f6a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.content .content__menu--chic {
+  background-color: #fff5fe;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.content .content__menu--delice {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.content .content__menu--palette {
+  background-color: #fdfffd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 .btn {
@@ -47,6 +82,24 @@ footer ul {
   justify-content: space-around;
 }
 
+@font-face {
+  font-family: "Devonshire-Regular";
+  src: url("../../font/Devonshire-Regular.ttf.woff") format("woff"), url("../../font/Devonshire-Regular.ttf.svg#Devonshire-Regular") format("svg"), url("../../font/Devonshire-Regular.ttf.eot"), url("../../font/Devonshire-Regular.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dancing-Script";
+  src: url("../../font/Dancing-Script.ttf.woff") format("woff"), url("../../Dancing-Script.ttf.svg#Dancing-Script") format("svg"), url("../../Dancing-Script.ttf.eot"), url("../../Dancing-Script.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kaushan-Script";
+  src: url("../../font/Kaushan-Script.ttf.woff") format("woff"), url("Kaushan-Script.ttf.svg#Kaushan-Script") format("svg"), url("Kaushan-Script.ttf.eot"), url("Kaushan-Script.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 h1 {
   text-align: center;
 }
@@ -58,6 +111,50 @@ h1 a {
   font-weight: bold;
   text-transform: lowercase;
   font-size: 46px;
+}
+
+.content .content__menu--note h2 {
+  font-family: "Devonshire-Regular", sans-serif;
+  font-weight: normal;
+}
+.content .content__menu--note h3 {
+  text-transform: uppercase;
+  font-family: "Segoe print", sans-serif;
+  font-weight: bold;
+}
+.content .content__menu--chic h2 {
+  background-image: linear-gradient(to right bottom, #d8852e, #d8852e, #ff367e, #e633be, #905bfd);
+  font-size: 1.3em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.content .content__menu--chic h3 {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #d8852e;
+}
+.content .content__menu--delice h2 {
+  font-family: "dancing-Script";
+  background-image: linear-gradient(to right bottom, #0431df, #0431df, #0074f7, #0887fb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.content .content__menu--delice h3 {
+  font-family: "Segoe print", sans-serif;
+  color: #0887fb;
+}
+.content .content__menu--palette h2 {
+  font-family: "Kaushan-Script", sans-serif;
+  background-image: linear-gradient(to right, #3d9339, #5dad4a, #7dc85b, #9ee36c, #bfff7e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.content .content__menu--palette h3 {
+  font-family: "Segoe print", sans-serif;
+  color: #72bf56;
 }
 
 .prochainement {

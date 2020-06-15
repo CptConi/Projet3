@@ -1,0 +1,12 @@
+@mixin content__menu-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+@mixin gradient-font {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

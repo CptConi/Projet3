@@ -12,8 +12,8 @@ header {
 }
 
 .content {
-  margin-top: 1em;
-  margin-bottom: 1.5em;
+  margin-top: 3em;
+  margin-bottom: 5em;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -22,9 +22,42 @@ header {
     width: $box-w;
     height: $box-h;
 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 }
+
+.content {
+  & .content__menu {
+    &--note {
+      background-color: $color-bg-note;
+      @include content__menu-layout;
+      & .fa-itunes-note {
+        background-image: linear-gradient(
+          to right,
+          #f04a5e,
+          #f35e5e,
+          #f56f60,
+          #f68064,
+          #f78f6a
+        );
+        @include gradient-font;
+      }
+    }
+    &--chic {
+      background-color: $color-bg-chic;
+      @include content__menu-layout;
+    }
+    &--delice {
+      background-color: $color-bg-delice;
+      @include content__menu-layout;
+    }
+    &--palette {
+      background-color: $color-bg-palette;
+      @include content__menu-layout;
+    }
+  }
+}
+
 .btn {
   text-align: center;
   .prochainement {
