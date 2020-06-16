@@ -8,6 +8,8 @@ $color-bg-palette: #fdfffd;
 $color-gradient1-note: #f04a5e;
 $color-gradient2-note: #f78f6a;
 
+$color-menu-note: #3c1218;
+
 $color-gradient1-chic: #d8852e;
 $color-gradient2-chic: #905bfd;
 
@@ -22,3 +24,9 @@ $box-w: 250px;
 $box-h: 350px;
 
 $footer-height: 3em;
+
+$lst_link-menu: "note", "chic", "delice", "palette";
+$lst-ellipsis: 1, 2, 3;
+
+$ellipsis-anim-dur: 0.8s;
+$ellipsis-anim-delay: $ellipsis-anim-dur/8;

@@ -14,15 +14,21 @@ header {
 .content {
   margin-top: 3em;
   margin-bottom: 5em;
-  width: 100%;
+  // width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
   .content__menu {
     width: $box-w;
     height: $box-h;
 
+    margin-top: 1em;
+    margin-bottom: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    @media (max-width: 1440px) {
+      min-width: $box-w;
+    }
   }
 }
 
@@ -66,6 +72,26 @@ header {
     border-radius: 8px;
     margin: auto;
     background-color: $color-green;
+  }
+}
+
+.ellipsis {
+  display: flex;
+  justify-content: center;
+  margin-top: 40vh;
+  @each $el in $lst-ellipsis {
+    .ellipsis--#{$el} {
+      width: 5vh;
+      height: 5vh;
+      margin: 0 5px 0 5px;
+      border-radius: 10vh;
+      background-color: grayscale($color: $color-green);
+      animation: ellipsis
+        $ellipsis-anim-dur
+        ($ellipsis-anim-delay * $el)
+        both
+        infinite;
+    }
   }
 }
 

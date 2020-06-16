@@ -1,0 +1,52 @@
+//Automation des zooms lors du hover sur index.html
+
+@keyframes ellipsis {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  5% {
+    transform: translateY(5px) scale(1.2, 0.8);
+    animation-timing-function: linear;
+  }
+  25% {
+    transform: translateY(-25px) scale(0.8, 1.2);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: translateY(-50px) scale(1, 1);
+    animation-timing-function: linear;
+  }
+  60% {
+    transform: translateY(-25px) scale(0.8, 1.2);
+    animation-timing-function: linear;
+  }
+
+  90% {
+    transform: scale(1.2, 0.8) translateY(5px);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@each $menu-type in $lst_link-menu {
+  .link_#{$menu-type}:hover {
+    & > .content__menu--#{$menu-type} > * {
+      transform: scale(1.1);
+      opacity: 0.6;
+      transition: transform 200ms, opacity 200ms;
+    }
+  }
+  .link_#{$menu-type} {
+    & > .content__menu--#{$menu-type} > * {
+      transition: transform 200ms, opacity 200ms;
+    }
+  }
+}
+
+.prochainement:hover {
+  border: $color-green 2px solid;
+  transform: scale(1.1);
+  background-color: lighten($color-green, 15);
+}

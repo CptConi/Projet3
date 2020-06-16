@@ -11,17 +11,23 @@ h1 {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 .content {
   & .content__menu {
     &--note {
       & h2 {
         font-family: "Devonshire-Regular", sans-serif;
         font-weight: normal;
+        color: $color-menu-note;
       }
       & h3 {
         text-transform: uppercase;
         font-family: "Segoe print", sans-serif;
         font-weight: bold;
+        color: $color-menu-note;
       }
     }
     &--chic {

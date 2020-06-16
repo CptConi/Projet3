@@ -12,15 +12,22 @@ header h1 {
 .content {
   margin-top: 3em;
   margin-bottom: 5em;
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .content .content__menu {
   width: 250px;
   height: 350px;
+  margin-top: 1em;
+  margin-bottom: 1em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1440px) {
+  .content .content__menu {
+    min-width: 250px;
+  }
 }
 
 .content .content__menu--note {
@@ -69,6 +76,36 @@ header h1 {
   background-color: #579c87;
 }
 
+.ellipsis {
+  display: flex;
+  justify-content: center;
+  margin-top: 40vh;
+}
+.ellipsis .ellipsis--1 {
+  width: 5vh;
+  height: 5vh;
+  margin: 0 5px 0 5px;
+  border-radius: 10vh;
+  background-color: #7a7a7a;
+  animation: ellipsis 0.8s 0.1s both infinite;
+}
+.ellipsis .ellipsis--2 {
+  width: 5vh;
+  height: 5vh;
+  margin: 0 5px 0 5px;
+  border-radius: 10vh;
+  background-color: #7a7a7a;
+  animation: ellipsis 0.8s 0.2s both infinite;
+}
+.ellipsis .ellipsis--3 {
+  width: 5vh;
+  height: 5vh;
+  margin: 0 5px 0 5px;
+  border-radius: 10vh;
+  background-color: #7a7a7a;
+  animation: ellipsis 0.8s 0.3s both infinite;
+}
+
 footer {
   position: fixed;
   width: 100%;
@@ -80,6 +117,80 @@ footer ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+@keyframes ellipsis {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  5% {
+    transform: translateY(5px) scale(1.2, 0.8);
+    animation-timing-function: linear;
+  }
+  25% {
+    transform: translateY(-25px) scale(0.8, 1.2);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: translateY(-50px) scale(1, 1);
+    animation-timing-function: linear;
+  }
+  60% {
+    transform: translateY(-25px) scale(0.8, 1.2);
+    animation-timing-function: linear;
+  }
+  90% {
+    transform: scale(1.2, 0.8) translateY(5px);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.link_note:hover > .content__menu--note > * {
+  transform: scale(1.1);
+  opacity: 0.6;
+  transition: transform 200ms, opacity 200ms;
+}
+
+.link_note > .content__menu--note > * {
+  transition: transform 200ms, opacity 200ms;
+}
+
+.link_chic:hover > .content__menu--chic > * {
+  transform: scale(1.1);
+  opacity: 0.6;
+  transition: transform 200ms, opacity 200ms;
+}
+
+.link_chic > .content__menu--chic > * {
+  transition: transform 200ms, opacity 200ms;
+}
+
+.link_delice:hover > .content__menu--delice > * {
+  transform: scale(1.1);
+  opacity: 0.6;
+  transition: transform 200ms, opacity 200ms;
+}
+
+.link_delice > .content__menu--delice > * {
+  transition: transform 200ms, opacity 200ms;
+}
+
+.link_palette:hover > .content__menu--palette > * {
+  transform: scale(1.1);
+  opacity: 0.6;
+  transition: transform 200ms, opacity 200ms;
+}
+
+.link_palette > .content__menu--palette > * {
+  transition: transform 200ms, opacity 200ms;
+}
+
+.prochainement:hover {
+  border: #579c87 2px solid;
+  transform: scale(1.1);
+  background-color: #85bbaa;
 }
 
 @font-face {
@@ -113,14 +224,20 @@ h1 a {
   font-size: 46px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .content .content__menu--note h2 {
   font-family: "Devonshire-Regular", sans-serif;
   font-weight: normal;
+  color: #3c1218;
 }
 .content .content__menu--note h3 {
   text-transform: uppercase;
   font-family: "Segoe print", sans-serif;
   font-weight: bold;
+  color: #3c1218;
 }
 .content .content__menu--chic h2 {
   background-image: linear-gradient(to right bottom, #d8852e, #d8852e, #ff367e, #e633be, #905bfd);
