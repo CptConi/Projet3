@@ -33,7 +33,7 @@ header h1 {
   background-color: #fcdfdb;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
 }
 .content .content__menu--note .fa-itunes-note {
@@ -46,21 +46,21 @@ header h1 {
   background-color: #fff5fe;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
 }
 .content .content__menu--delice {
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
 }
 .content .content__menu--palette {
   background-color: #fdfffd;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
 }
 
@@ -114,6 +114,11 @@ header h1 {
   animation: ellipsis 0.8s 0.3s both infinite;
 }
 
+.menu-page__title {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 .sheet-note {
   background-color: #fcdfdb;
   width: 78%;
@@ -123,13 +128,14 @@ header h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .sheet-note__title {
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-top: 1em;
+  margin-bottom: 5em;
 }
 .sheet-note__title .fab {
   margin: auto;
@@ -184,6 +190,155 @@ header h1 {
 .sheet-note__footer h2 {
   padding: 0;
   margin: 0;
+}
+
+.sheet-chic {
+  background-color: #fff5fe;
+  width: 78%;
+  height: 140vw;
+  margin: auto;
+  margin-bottom: 4em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sheet-chic__title {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+.sheet-chic__container {
+  width: 80%;
+}
+.sheet-chic__container--header {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sheet-chic__container--header img {
+  width: 33%;
+}
+.sheet-chic__container--dishes {
+  justify-content: space-between;
+  display: flex;
+}
+.sheet-chic__container--dishes ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.sheet-chic__container--dishes-name {
+  line-height: 3em;
+}
+.sheet-chic__container--dishes-price {
+  line-height: 2.65em;
+  text-align: right;
+}
+
+.sheet-delice {
+  background-color: #f9f9f9;
+  width: 78%;
+  height: 140vw;
+  margin: auto;
+  margin-bottom: 4em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sheet-delice__title {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+.sheet-delice__container {
+  width: 80%;
+}
+.sheet-delice__container--header {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sheet-delice__container--header img {
+  width: 33%;
+}
+.sheet-delice__container--dishes {
+  margin-left: 8%;
+  margin-right: 8%;
+  justify-content: space-between;
+  display: flex;
+}
+.sheet-delice__container--dishes ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.sheet-delice__container--dishes-name {
+  line-height: 3em;
+}
+.sheet-delice__container--dishes-price {
+  line-height: 2.65em;
+  text-align: right;
+}
+
+.sheet-palette {
+  background-color: #fdfffd;
+  width: 78%;
+  height: 140vw;
+  margin: auto;
+  margin-bottom: 4em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sheet-palette__title {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+.sheet-palette__container {
+  width: 80%;
+}
+.sheet-palette__container--header {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sheet-palette__container--header img {
+  width: 33%;
+  object-fit: contain;
+}
+.sheet-palette__container--dishes {
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: space-between;
+  display: flex;
+}
+.sheet-palette__container--dishes ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.sheet-palette__container--dishes-name {
+  line-height: 3em;
+}
+.sheet-palette__container--dishes-price {
+  line-height: 2.65em;
+  text-align: right;
 }
 
 footer {
@@ -288,13 +443,25 @@ footer li:hover {
 }
 @font-face {
   font-family: "Dancing-Script";
-  src: url("../../font/Dancing-Script.ttf.woff") format("woff"), url("../../Dancing-Script.ttf.svg#Dancing-Script") format("svg"), url("../../Dancing-Script.ttf.eot"), url("../../Dancing-Script.ttf.eot?#iefix") format("embedded-opentype");
+  src: url("../../font/Dancing-Script.ttf.woff") format("woff"), url("../../font/Dancing-Script.ttf.svg#Dancing-Script") format("svg"), url("../../font/Dancing-Script.ttf.eot"), url("../../font/Dancing-Script.ttf.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Kaushan-Script";
-  src: url("../../font/Kaushan-Script.ttf.woff") format("woff"), url("Kaushan-Script.ttf.svg#Kaushan-Script") format("svg"), url("Kaushan-Script.ttf.eot"), url("Kaushan-Script.ttf.eot?#iefix") format("embedded-opentype");
+  src: url("../../font/Kaushan-Script.ttf.woff") format("woff"), url("../../font/Kaushan-Script.ttf.svg#Kaushan-Script") format("svg"), url("../../font/Kaushan-Script.ttf.eot"), url("../../font/Kaushan-Script.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Croissant-One";
+  src: url("../../font/Croissant-One.ttf.woff") format("woff"), url("../../font/Croissant-One.ttf.svg#Croissant-One") format("svg"), url("../../font/Croissant-One.ttf.eot"), url("../../font/Croissant-One.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sumana";
+  src: url("../../font/Sumana.ttf.woff") format("woff"), url("../../font/Sumana.ttf.svg#Sumana") format("svg"), url("../../font/Sumana.ttf.eot"), url("../../font/Sumana.ttf.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -327,11 +494,12 @@ a {
   color: #3c1218;
 }
 .content .content__menu--chic h2 {
-  background-image: linear-gradient(to right bottom, #d8852e, #d8852e, #ff367e, #e633be, #905bfd);
-  font-size: 1.3em;
+  font-family: "Croissant-One", sans-serif;
+  background-image: linear-gradient(to right, #d8852e, #d8852e, #ff367e, #e633be, #905bfd);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-size: 1.1em;
 }
 .content .content__menu--chic h3 {
   font-weight: bold;
@@ -339,7 +507,7 @@ a {
   color: #d8852e;
 }
 .content .content__menu--delice h2 {
-  font-family: "dancing-Script";
+  font-family: "dancing-Script", sans-serif;
   background-image: linear-gradient(to right bottom, #0431df, #0431df, #0074f7, #0887fb);
   background-clip: text;
   -webkit-background-clip: text;
@@ -403,6 +571,73 @@ a {
 }
 .sheet-note__footer .fab {
   font-size: 2.5em;
+}
+
+.sheet-chic {
+  background-image: linear-gradient(to bottom, #d8852e, #d8852e, #ff367e, #e633be, #905bfd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.sheet-chic__title .fab {
+  font-size: 8em;
+}
+.sheet-chic__title h2 {
+  font-size: 4em;
+  font-family: "Croissant-One", sans-serif;
+  font-weight: normal;
+  background-image: linear-gradient(to right bottom, #d8852e, #d8852e, #ff367e, #e633be, #905bfd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 3em;
+}
+.sheet-chic__container {
+  font-family: "Sumana", sans-serif;
+}
+.sheet-chic__container .--chic-color2 {
+  color: #a56799;
+}
+.sheet-chic__container .--chic-color3 {
+  color: #6e4ccc;
+}
+
+.sheet-delice__title {
+  background-image: linear-gradient(to right bottom, #0431df, #0431df, #0074f7, #0887fb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.sheet-delice__title .fab {
+  font-size: 8em;
+}
+.sheet-delice__title h2 {
+  font-size: 4em;
+  font-family: "dancing-Script", sans-serif;
+  font-weight: normal;
+  font-size: 3em;
+}
+.sheet-delice__container {
+  font-family: "Segoe print", sans-serif;
+}
+
+.sheet-palette__title {
+  background-image: linear-gradient(to right, #3d9339, #5dad4a, #7dc85b, #9ee36c, #bfff7e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.sheet-palette__title .fab {
+  font-size: 8em;
+}
+.sheet-palette__title h2 {
+  font-size: 4em;
+  font-family: "Kaushan-Script", sans-serif;
+  font-weight: normal;
+  font-size: 3em;
+}
+.sheet-palette__container {
+  font-family: "Segoe print", sans-serif;
 }
 
 footer {

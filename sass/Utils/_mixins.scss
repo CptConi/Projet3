@@ -1,7 +1,7 @@
 @mixin content__menu-layout {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
 }
 
@@ -19,7 +19,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -34,4 +33,51 @@
   &--dishes-price {
     font-size: 0.9em;
   }
+}
+
+@mixin gradient-note {
+  background-image: linear-gradient(
+    to right,
+    #f04a5e,
+    #f35e5e,
+    #f56f60,
+    #f68064,
+    #f78f6a
+  );
+  @include gradient-font;
+}
+
+@mixin gradient-chic($direction: right) {
+  background-image: linear-gradient(
+    to $direction,
+    #d8852e,
+    #d8852e,
+    #ff367e,
+    #e633be,
+    #905bfd
+  );
+  @include gradient-font;
+}
+
+@mixin gradient-delice($direction: right bottom) {
+  background-image: linear-gradient(
+    to $direction,
+    #0431df,
+    #0431df,
+    #0074f7,
+    #0887fb
+  );
+  @include gradient-font;
+}
+
+@mixin gradient-palette($direction: right) {
+  background-image: linear-gradient(
+    to right,
+    #3d9339,
+    #5dad4a,
+    #7dc85b,
+    #9ee36c,
+    #bfff7e
+  );
+  @include gradient-font;
 }

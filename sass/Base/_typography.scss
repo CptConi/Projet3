@@ -32,16 +32,9 @@ a {
     }
     &--chic {
       & h2 {
-        background-image: linear-gradient(
-          to right bottom,
-          #d8852e,
-          #d8852e,
-          #ff367e,
-          #e633be,
-          #905bfd
-        );
-        font-size: 1.3em;
-        @include gradient-font;
+        font-family: "Croissant-One", sans-serif;
+        @include gradient-chic;
+        font-size: 1.1em;
       }
       & h3 {
         font-weight: bold;
@@ -51,15 +44,8 @@ a {
     }
     &--delice {
       & h2 {
-        font-family: "dancing-Script";
-        background-image: linear-gradient(
-          to right bottom,
-          #0431df,
-          #0431df,
-          #0074f7,
-          #0887fb
-        );
-        @include gradient-font;
+        font-family: "dancing-Script", sans-serif;
+        @include gradient-delice;
       }
       & h3 {
         font-family: "Segoe print", sans-serif;
@@ -69,15 +55,7 @@ a {
     &--palette {
       & h2 {
         font-family: "Kaushan-Script", sans-serif;
-        background-image: linear-gradient(
-          to right,
-          #3d9339,
-          #5dad4a,
-          #7dc85b,
-          #9ee36c,
-          #bfff7e
-        );
-        @include gradient-font;
+        @include gradient-palette;
       }
       & h3 {
         font-family: "Segoe print", sans-serif;
@@ -123,6 +101,72 @@ a {
     .fab {
       font-size: 2.5em;
     }
+  }
+}
+
+.sheet-chic {
+  @include gradient-chic(bottom);
+
+  &__title {
+    .fab {
+      font-size: 8em;
+    }
+    h2 {
+      font-size: 4em;
+      font-family: "Croissant-One", sans-serif;
+      font-weight: normal;
+      @include gradient-chic(right bottom);
+      font-size: 3em;
+    }
+  }
+  &__container {
+    font-family: "Sumana", sans-serif;
+    .--chic-color1 {
+    }
+    .--chic-color2 {
+      color: $color-chic2;
+    }
+    .--chic-color3 {
+      color: $color-chic3;
+    }
+  }
+}
+
+.sheet-delice {
+  &__title {
+    .fab {
+      font-size: 8em;
+    }
+    h2 {
+      font-size: 4em;
+      font-family: "dancing-Script", sans-serif;
+      font-weight: normal;
+
+      font-size: 3em;
+    }
+    @include gradient-delice;
+  }
+  &__container {
+    font-family: "Segoe print", sans-serif;
+  }
+}
+
+.sheet-palette {
+  &__title {
+    .fab {
+      font-size: 8em;
+    }
+    h2 {
+      font-size: 4em;
+      font-family: "Kaushan-Script", sans-serif;
+      font-weight: normal;
+
+      font-size: 3em;
+    }
+    @include gradient-palette;
+  }
+  &__container {
+    font-family: "Segoe print", sans-serif;
   }
 }
 

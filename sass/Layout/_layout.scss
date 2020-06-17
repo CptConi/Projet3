@@ -31,15 +31,7 @@ header {
       background-color: $color-bg-note;
       @include content__menu-layout;
       & .fa-itunes-note {
-        background-image: linear-gradient(
-          to right,
-          #f04a5e,
-          #f35e5e,
-          #f56f60,
-          #f68064,
-          #f78f6a
-        );
-        @include gradient-font;
+        @include gradient-note;
       }
     }
     &--chic {
@@ -97,6 +89,13 @@ header {
   }
 }
 
+.menu-page {
+  &__title {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+
 .sheet-note {
   background-color: $color-bg-note;
   @include sheet-menu-layout;
@@ -104,17 +103,11 @@ header {
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-top: 1em;
+    margin-bottom: 5em;
     & .fab {
       margin: auto;
-      background-image: linear-gradient(
-        to right,
-        #f04a5e,
-        #f35e5e,
-        #f56f60,
-        #f68064,
-        #f78f6a
-      );
-      @include gradient-font;
+      @include gradient-note;
     }
   }
   &__container {
@@ -155,21 +148,152 @@ header {
     flex-direction: row;
     margin-top: 3em;
     .fab {
-      background-image: linear-gradient(
-        to right,
-        #f04a5e,
-        #f35e5e,
-        #f56f60,
-        #f68064,
-        #f78f6a
-      );
-      @include gradient-font;
+      @include gradient-note;
       padding: 0;
       margin-right: 0.2em;
     }
     h2 {
       padding: 0;
       margin: 0;
+    }
+  }
+}
+
+.sheet-chic {
+  background-color: $color-bg-chic;
+  @include sheet-menu-layout;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 5em;
+  }
+  &__container {
+    width: 80%;
+    &--header {
+      margin-top: 3em;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &:hover {
+        //TODO: AJOUTER ANIMATION HOVER ICI
+      }
+      img {
+        width: 33%;
+      }
+    }
+    &--dishes {
+      justify-content: space-between;
+      display: flex;
+      & ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      &-name {
+        line-height: 3em;
+      }
+      &-price {
+        line-height: 2.65em;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.sheet-delice {
+  background-color: $color-bg-delice;
+  @include sheet-menu-layout;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 5em;
+  }
+  &__container {
+    width: 80%;
+    &--header {
+      margin-top: 3em;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &:hover {
+        //TODO: AJOUTER ANIMATION HOVER ICI
+      }
+      img {
+        width: 33%;
+      }
+    }
+    &--dishes {
+      // La marge LR est plus importante sur ce menu que sur les autres.
+      margin-left: 8%;
+      margin-right: 8%;
+      justify-content: space-between;
+      display: flex;
+      & ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      &-name {
+        line-height: 3em;
+      }
+      &-price {
+        line-height: 2.65em;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.sheet-palette {
+  background-color: $color-bg-palette;
+  @include sheet-menu-layout;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 5em;
+  }
+  &__container {
+    width: 80%;
+    &--header {
+      margin-top: 3em;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &:hover {
+        //TODO: AJOUTER ANIMATION HOVER ICI
+      }
+      img {
+        width: 33%;
+        object-fit: contain;
+      }
+    }
+    &--dishes {
+      // La marge LR est plus importante sur ce menu que sur les autres.
+      margin-left: 5%;
+      margin-right: 5%;
+      justify-content: space-between;
+      display: flex;
+      & ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      &-name {
+        line-height: 3em;
+      }
+      &-price {
+        line-height: 2.65em;
+        text-align: right;
+      }
     }
   }
 }
