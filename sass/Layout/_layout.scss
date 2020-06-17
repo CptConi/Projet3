@@ -12,9 +12,8 @@ header {
 }
 
 .content {
-  margin-top: 3em;
-  margin-bottom: 5em;
-  // width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -22,18 +21,12 @@ header {
   .content__menu {
     width: $box-w;
     height: $box-h;
-
     margin-top: 1em;
     margin-bottom: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     @media (max-width: 1440px) {
       min-width: $box-w;
     }
-  }
-}
-
-.content {
-  & .content__menu {
     &--note {
       background-color: $color-bg-note;
       @include content__menu-layout;
@@ -71,7 +64,16 @@ header {
     padding: 0.4em 1.6em;
     border-radius: 8px;
     margin: auto;
+    margin-bottom: 20%;
     background-color: $color-green;
+    &:hover {
+      border: $color-green 2px solid;
+      transform: scale(1.1);
+      background-color: lighten($color-green, 15);
+    }
+  }
+  &--prochainement {
+    margin-bottom: 2em;
   }
 }
 
@@ -95,6 +97,83 @@ header {
   }
 }
 
+.sheet-note {
+  background-color: $color-bg-note;
+  @include sheet-menu-layout;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    & .fab {
+      margin: auto;
+      background-image: linear-gradient(
+        to right,
+        #f04a5e,
+        #f35e5e,
+        #f56f60,
+        #f68064,
+        #f78f6a
+      );
+      @include gradient-font;
+    }
+  }
+  &__container {
+    width: 85%;
+    &--header {
+      margin-top: 3em;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &:hover {
+        //TODO: AJOUTER ANIMATION HOVER ICI
+      }
+      img {
+        object-fit: contain;
+        width: 33%;
+      }
+    }
+    &--dishes {
+      justify-content: space-between;
+      display: flex;
+      & ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      &-name {
+        line-height: 3em;
+      }
+      &-price {
+        line-height: 2.65em;
+        text-align: right;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+    .fab {
+      background-image: linear-gradient(
+        to right,
+        #f04a5e,
+        #f35e5e,
+        #f56f60,
+        #f68064,
+        #f78f6a
+      );
+      @include gradient-font;
+      padding: 0;
+      margin-right: 0.2em;
+    }
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
 footer {
   position: fixed; // sticky footer
 
@@ -105,6 +184,11 @@ footer {
   & ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 1% 4%;
+    padding: 0;
+  }
+  & li:hover {
+    animation: wiggle $wiggle-anim-dur cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
   }
 }

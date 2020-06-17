@@ -1,5 +1,4 @@
-//Automation des zooms lors du hover sur index.html
-
+// Ellipsis moving on soon.html
 @keyframes ellipsis {
   0% {
     transform: scale(1, 1) translateY(0);
@@ -30,6 +29,17 @@
   }
 }
 
+// Text wiggling when mouse over (footer)
+@keyframes wiggle {
+  25% {
+    transform: translateX($shake-intensity);
+  }
+  75% {
+    transform: translateX($shake-intensity * -1);
+  }
+}
+
+//Application zoom on mouseover sur les menu__content
 @each $menu-type in $lst_link-menu {
   .link_#{$menu-type}:hover {
     & > .content__menu--#{$menu-type} > * {
@@ -43,10 +53,4 @@
       transition: transform 200ms, opacity 200ms;
     }
   }
-}
-
-.prochainement:hover {
-  border: $color-green 2px solid;
-  transform: scale(1.1);
-  background-color: lighten($color-green, 15);
 }

@@ -10,8 +10,8 @@ header h1 {
 }
 
 .content {
-  margin-top: 3em;
-  margin-bottom: 5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -29,7 +29,6 @@ header h1 {
     min-width: 250px;
   }
 }
-
 .content .content__menu--note {
   background-color: #fcdfdb;
   display: flex;
@@ -73,7 +72,16 @@ header h1 {
   padding: 0.4em 1.6em;
   border-radius: 8px;
   margin: auto;
+  margin-bottom: 20%;
   background-color: #579c87;
+}
+.btn .prochainement:hover {
+  border: #579c87 2px solid;
+  transform: scale(1.1);
+  background-color: #85bbaa;
+}
+.btn--prochainement {
+  margin-bottom: 2em;
 }
 
 .ellipsis {
@@ -106,6 +114,78 @@ header h1 {
   animation: ellipsis 0.8s 0.3s both infinite;
 }
 
+.sheet-note {
+  background-color: #fcdfdb;
+  width: 78%;
+  height: 140vw;
+  margin: auto;
+  margin-bottom: 4em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sheet-note__title {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.sheet-note__title .fab {
+  margin: auto;
+  background-image: linear-gradient(to right, #f04a5e, #f35e5e, #f56f60, #f68064, #f78f6a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.sheet-note__container {
+  width: 85%;
+}
+.sheet-note__container--header {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sheet-note__container--header img {
+  object-fit: contain;
+  width: 33%;
+}
+.sheet-note__container--dishes {
+  justify-content: space-between;
+  display: flex;
+}
+.sheet-note__container--dishes ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.sheet-note__container--dishes-name {
+  line-height: 3em;
+}
+.sheet-note__container--dishes-price {
+  line-height: 2.65em;
+  text-align: right;
+}
+.sheet-note__footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3em;
+}
+.sheet-note__footer .fab {
+  background-image: linear-gradient(to right, #f04a5e, #f35e5e, #f56f60, #f68064, #f78f6a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 0;
+  margin-right: 0.2em;
+}
+.sheet-note__footer h2 {
+  padding: 0;
+  margin: 0;
+}
+
 footer {
   position: fixed;
   width: 100%;
@@ -116,7 +196,12 @@ footer {
 footer ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 1% 4%;
+  padding: 0;
+}
+footer li:hover {
+  animation: wiggle 250ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
 }
 
 @keyframes ellipsis {
@@ -145,6 +230,14 @@ footer ul {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes wiggle {
+  25% {
+    transform: translateX(2%);
+  }
+  75% {
+    transform: translateX(-2%);
   }
 }
 .link_note:hover > .content__menu--note > * {
@@ -185,12 +278,6 @@ footer ul {
 
 .link_palette > .content__menu--palette > * {
   transition: transform 200ms, opacity 200ms;
-}
-
-.prochainement:hover {
-  border: #579c87 2px solid;
-  transform: scale(1.1);
-  background-color: #85bbaa;
 }
 
 @font-face {
@@ -281,13 +368,52 @@ a {
   font-size: 1.2em;
 }
 
+.menu-page__title {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.sheet-note__title .fab {
+  font-size: 8em;
+}
+.sheet-note__title h2 {
+  font-size: 4em;
+  font-family: "Devonshire-Regular", sans-serif;
+  font-weight: normal;
+  color: #3c1218;
+}
+.sheet-note__container {
+  font-family: "Segoe print", sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.sheet-note__container--dishes-name {
+  font-weight: normal;
+  font-size: 0.8em;
+}
+.sheet-note__container--dishes-price {
+  font-size: 0.9em;
+}
+.sheet-note__footer {
+  font-size: 1.7em;
+  font-family: "Devonshire-Regular", sans-serif;
+  font-weight: normal;
+  color: #3c1218;
+  height: 100px;
+}
+.sheet-note__footer .fab {
+  font-size: 2.5em;
+}
+
 footer {
-  color: #fdcb46;
   font-family: "Roboto", sans-serif;
   font-size: 1em;
 }
 footer li {
   list-style-type: none;
+}
+footer a {
+  color: #fdcb46;
 }
 
 /*# sourceMappingURL=style.css.map */
