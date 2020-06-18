@@ -90,7 +90,18 @@ a {
     }
   }
   &__container {
-    @include typo-note;
+    font-family: "Segoe print", sans-serif;
+    &--header-title {
+      font-weight: bold;
+      font-size: 1.8em;
+    }
+    &--dishes-name {
+      font-size: 1.2em;
+    }
+    &--dishes-price {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
   }
   &__footer {
     font-size: 1.7em;
@@ -108,11 +119,7 @@ a {
   @include gradient-chic(bottom);
 
   &__title {
-    .fab {
-      font-size: 8em;
-    }
     h2 {
-      font-size: 4em;
       font-family: "Croissant-One", sans-serif;
       font-weight: normal;
       @include gradient-chic(right bottom);
@@ -121,52 +128,78 @@ a {
   }
   &__container {
     font-family: "Sumana", sans-serif;
-    .--chic-color1 {
+    & .--chic-color1 {
+      color: $color-chic1;
+      font-size: 1.5em;
+      font-weight: bold;
     }
-    .--chic-color2 {
+    & .--chic-color2 {
       color: $color-chic2;
+      font-size: 1.5em;
+      font-weight: bold;
     }
-    .--chic-color3 {
+    & .--chic-color3 {
       color: $color-chic3;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    &--dishes {
+      &-name {
+        font-size: 1.2em;
+      }
+      &-price {
+        font-size: 1.3em;
+      }
     }
   }
 }
 
 .sheet-delice {
   &__title {
-    .fab {
-      font-size: 8em;
-    }
     h2 {
-      font-size: 4em;
       font-family: "dancing-Script", sans-serif;
       font-weight: normal;
-
-      font-size: 3em;
+      font-size: 5em;
     }
     @include gradient-delice;
   }
   &__container {
     font-family: "Segoe print", sans-serif;
+    &--header {
+      font-size: 1.4em;
+    }
+    &--dishes {
+      &-name {
+        font-size: 1.2em;
+      }
+      &-price {
+        font-size: 1.5em;
+      }
+    }
   }
 }
 
 .sheet-palette {
   &__title {
-    .fab {
-      font-size: 8em;
-    }
     h2 {
-      font-size: 4em;
       font-family: "Kaushan-Script", sans-serif;
       font-weight: normal;
-
-      font-size: 3em;
+      font-size: 6em;
     }
     @include gradient-palette;
   }
   &__container {
     font-family: "Segoe print", sans-serif;
+    &--header-title {
+      font-size: 1.3em;
+    }
+    &--dishes-name {
+      font-size: 1.2em;
+    }
+    &--dishes-price {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
   }
 }
 

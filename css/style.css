@@ -95,7 +95,7 @@ header h1 {
   margin: 0 5px 0 5px;
   border-radius: 10vh;
   background-color: #7a7a7a;
-  animation: ellipsis 0.8s 0.1s both infinite;
+  animation: ellipsis 1.1s 0.1375s both infinite;
 }
 .ellipsis .ellipsis--2 {
   width: 5vh;
@@ -103,7 +103,7 @@ header h1 {
   margin: 0 5px 0 5px;
   border-radius: 10vh;
   background-color: #7a7a7a;
-  animation: ellipsis 0.8s 0.2s both infinite;
+  animation: ellipsis 1.1s 0.275s both infinite;
 }
 .ellipsis .ellipsis--3 {
   width: 5vh;
@@ -111,7 +111,7 @@ header h1 {
   margin: 0 5px 0 5px;
   border-radius: 10vh;
   background-color: #7a7a7a;
-  animation: ellipsis 0.8s 0.3s both infinite;
+  animation: ellipsis 1.1s 0.4125s both infinite;
 }
 
 .menu-page__title {
@@ -121,8 +121,8 @@ header h1 {
 
 .sheet-note {
   background-color: #fcdfdb;
-  width: 78%;
-  height: 140vw;
+  width: 1120px;
+  height: 1600px;
   margin: auto;
   margin-bottom: 4em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -134,8 +134,8 @@ header h1 {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 1em;
-  margin-bottom: 5em;
+  margin-top: 8em;
+  margin-bottom: 0em;
 }
 .sheet-note__title .fab {
   margin: auto;
@@ -154,9 +154,27 @@ header h1 {
   flex-direction: row;
   justify-content: space-between;
 }
+.sheet-note__container--header-title {
+  position: relative;
+}
+.sheet-note__container--header-title:hover:after {
+  width: 100%;
+  left: 0;
+  background: black;
+}
+.sheet-note__container--header-title:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  right: 0;
+  background: black;
+  transition: width 0.2s ease;
+}
 .sheet-note__container--header img {
   object-fit: contain;
-  width: 33%;
+  width: 300px;
 }
 .sheet-note__container--dishes {
   justify-content: space-between;
@@ -171,7 +189,7 @@ header h1 {
   line-height: 3em;
 }
 .sheet-note__container--dishes-price {
-  line-height: 2.65em;
+  line-height: 2.9em;
   text-align: right;
 }
 .sheet-note__footer {
@@ -194,8 +212,8 @@ header h1 {
 
 .sheet-chic {
   background-color: #fff5fe;
-  width: 78%;
-  height: 140vw;
+  width: 1120px;
+  height: 1600px;
   margin: auto;
   margin-bottom: 4em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -207,8 +225,8 @@ header h1 {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 1em;
-  margin-bottom: 5em;
+  margin-top: 8em;
+  margin-bottom: 0em;
 }
 .sheet-chic__container {
   width: 80%;
@@ -220,8 +238,26 @@ header h1 {
   flex-direction: row;
   justify-content: space-between;
 }
+.sheet-chic__container--header-title {
+  position: relative;
+}
+.sheet-chic__container--header-title:hover:after {
+  width: 100%;
+  left: 0;
+  background: black;
+}
+.sheet-chic__container--header-title:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  right: 0;
+  background: black;
+  transition: width 0.2s ease;
+}
 .sheet-chic__container--header img {
-  width: 33%;
+  width: 300px;
 }
 .sheet-chic__container--dishes {
   justify-content: space-between;
@@ -242,8 +278,8 @@ header h1 {
 
 .sheet-delice {
   background-color: #f9f9f9;
-  width: 78%;
-  height: 140vw;
+  width: 1120px;
+  height: 1600px;
   margin: auto;
   margin-bottom: 4em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -255,8 +291,8 @@ header h1 {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 1em;
-  margin-bottom: 5em;
+  margin-top: 8em;
+  margin-bottom: 0em;
 }
 .sheet-delice__container {
   width: 80%;
@@ -268,12 +304,29 @@ header h1 {
   flex-direction: row;
   justify-content: space-between;
 }
+.sheet-delice__container--header-title {
+  position: relative;
+}
+.sheet-delice__container--header-title:hover:after {
+  width: 100%;
+  left: 0;
+  background: black;
+}
+.sheet-delice__container--header-title:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  right: 0;
+  background: black;
+  transition: width 0.2s ease;
+}
 .sheet-delice__container--header img {
-  width: 33%;
+  width: 300px;
 }
 .sheet-delice__container--dishes {
-  margin-left: 8%;
-  margin-right: 8%;
+  margin: 0 5em;
   justify-content: space-between;
   display: flex;
 }
@@ -283,17 +336,17 @@ header h1 {
   list-style-type: none;
 }
 .sheet-delice__container--dishes-name {
-  line-height: 3em;
+  line-height: 3.6em;
 }
 .sheet-delice__container--dishes-price {
-  line-height: 2.65em;
+  line-height: 2.8em;
   text-align: right;
 }
 
 .sheet-palette {
   background-color: #fdfffd;
-  width: 78%;
-  height: 140vw;
+  width: 1120px;
+  height: 1600px;
   margin: auto;
   margin-bottom: 4em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -305,8 +358,8 @@ header h1 {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 1em;
-  margin-bottom: 5em;
+  margin-top: 8em;
+  margin-bottom: 0em;
 }
 .sheet-palette__container {
   width: 80%;
@@ -318,8 +371,26 @@ header h1 {
   flex-direction: row;
   justify-content: space-between;
 }
+.sheet-palette__container--header-title {
+  position: relative;
+}
+.sheet-palette__container--header-title:hover:after {
+  width: 100%;
+  left: 0;
+  background: black;
+}
+.sheet-palette__container--header-title:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  right: 0;
+  background: black;
+  transition: width 0.2s ease;
+}
 .sheet-palette__container--header img {
-  width: 33%;
+  width: 300px;
   object-fit: contain;
 }
 .sheet-palette__container--dishes {
@@ -552,15 +623,17 @@ a {
 }
 .sheet-note__container {
   font-family: "Segoe print", sans-serif;
+}
+.sheet-note__container--header-title {
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.8em;
 }
 .sheet-note__container--dishes-name {
-  font-weight: normal;
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 .sheet-note__container--dishes-price {
-  font-size: 0.9em;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 .sheet-note__footer {
   font-size: 1.7em;
@@ -579,11 +652,7 @@ a {
   -webkit-background-clip: text;
   color: transparent;
 }
-.sheet-chic__title .fab {
-  font-size: 8em;
-}
 .sheet-chic__title h2 {
-  font-size: 4em;
   font-family: "Croissant-One", sans-serif;
   font-weight: normal;
   background-image: linear-gradient(to right bottom, #d8852e, #d8852e, #ff367e, #e633be, #905bfd);
@@ -595,11 +664,26 @@ a {
 .sheet-chic__container {
   font-family: "Sumana", sans-serif;
 }
+.sheet-chic__container .--chic-color1 {
+  color: #c67412;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 .sheet-chic__container .--chic-color2 {
   color: #a56799;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 .sheet-chic__container .--chic-color3 {
   color: #6e4ccc;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.sheet-chic__container--dishes-name {
+  font-size: 1.2em;
+}
+.sheet-chic__container--dishes-price {
+  font-size: 1.3em;
 }
 
 .sheet-delice__title {
@@ -608,17 +692,22 @@ a {
   -webkit-background-clip: text;
   color: transparent;
 }
-.sheet-delice__title .fab {
-  font-size: 8em;
-}
 .sheet-delice__title h2 {
-  font-size: 4em;
   font-family: "dancing-Script", sans-serif;
   font-weight: normal;
-  font-size: 3em;
+  font-size: 5em;
 }
 .sheet-delice__container {
   font-family: "Segoe print", sans-serif;
+}
+.sheet-delice__container--header {
+  font-size: 1.4em;
+}
+.sheet-delice__container--dishes-name {
+  font-size: 1.2em;
+}
+.sheet-delice__container--dishes-price {
+  font-size: 1.5em;
 }
 
 .sheet-palette__title {
@@ -627,17 +716,23 @@ a {
   -webkit-background-clip: text;
   color: transparent;
 }
-.sheet-palette__title .fab {
-  font-size: 8em;
-}
 .sheet-palette__title h2 {
-  font-size: 4em;
   font-family: "Kaushan-Script", sans-serif;
   font-weight: normal;
-  font-size: 3em;
+  font-size: 6em;
 }
 .sheet-palette__container {
   font-family: "Segoe print", sans-serif;
+}
+.sheet-palette__container--header-title {
+  font-size: 1.3em;
+}
+.sheet-palette__container--dishes-name {
+  font-size: 1.2em;
+}
+.sheet-palette__container--dishes-price {
+  font-size: 1.4em;
+  font-weight: bold;
 }
 
 footer {

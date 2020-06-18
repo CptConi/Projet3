@@ -110,12 +110,9 @@ header {
     width: 85%;
     &--header {
       @include sheet__separator;
-      &:hover {
-        //TODO: AJOUTER ANIMATION HOVER ICI
-      }
       img {
         object-fit: contain;
-        width: 33%;
+        width: 300px;
       }
     }
     &--dishes {
@@ -124,7 +121,7 @@ header {
         line-height: 3em;
       }
       &-price {
-        line-height: 2.65em;
+        line-height: 2.9em;
         text-align: right;
       }
     }
@@ -155,11 +152,8 @@ header {
     width: 80%;
     &--header {
       @include sheet__separator;
-      &:hover {
-        //TODO: AJOUTER ANIMATION HOVER ICI
-      }
       img {
-        width: 33%;
+        width: 300px;
       }
     }
     &--dishes {
@@ -185,23 +179,19 @@ header {
     width: 80%;
     &--header {
       @include sheet__separator;
-      &:hover {
-        //TODO: AJOUTER ANIMATION HOVER ICI
-      }
       img {
-        width: 33%;
+        width: 300px;
       }
     }
     &--dishes {
       // La marge LR est plus importante sur ce menu que sur les autres.
-      margin-left: 8%;
-      margin-right: 8%;
+      margin: 0 5em;
       @include list-style;
       &-name {
-        line-height: 3em;
+        line-height: 3.6em;
       }
       &-price {
-        line-height: 2.65em;
+        line-height: 2.8em;
         text-align: right;
       }
     }
@@ -218,11 +208,8 @@ header {
     width: 80%;
     &--header {
       @include sheet__separator;
-      &:hover {
-        //TODO: AJOUTER ANIMATION HOVER ICI
-      }
       img {
-        width: 33%;
+        width: 300px;
         object-fit: contain;
       }
     }
