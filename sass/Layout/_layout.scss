@@ -100,11 +100,7 @@ header {
   background-color: $color-bg-note;
   @include sheet-menu-layout;
   &__title {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 5em;
+    @include sheet__title;
     & .fab {
       margin: auto;
       @include gradient-note;
@@ -113,11 +109,7 @@ header {
   &__container {
     width: 85%;
     &--header {
-      margin-top: 3em;
-      margin-bottom: 1em;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include sheet__separator;
       &:hover {
         //TODO: AJOUTER ANIMATION HOVER ICI
       }
@@ -127,13 +119,7 @@ header {
       }
     }
     &--dishes {
-      justify-content: space-between;
-      display: flex;
-      & ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-      }
+      @include list-style;
       &-name {
         line-height: 3em;
       }
@@ -163,20 +149,12 @@ header {
   background-color: $color-bg-chic;
   @include sheet-menu-layout;
   &__title {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 5em;
+    @include sheet__title;
   }
   &__container {
     width: 80%;
     &--header {
-      margin-top: 3em;
-      margin-bottom: 1em;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include sheet__separator;
       &:hover {
         //TODO: AJOUTER ANIMATION HOVER ICI
       }
@@ -185,13 +163,7 @@ header {
       }
     }
     &--dishes {
-      justify-content: space-between;
-      display: flex;
-      & ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-      }
+      @include list-style;
       &-name {
         line-height: 3em;
       }
@@ -207,20 +179,12 @@ header {
   background-color: $color-bg-delice;
   @include sheet-menu-layout;
   &__title {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 5em;
+    @include sheet__title;
   }
   &__container {
     width: 80%;
     &--header {
-      margin-top: 3em;
-      margin-bottom: 1em;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include sheet__separator;
       &:hover {
         //TODO: AJOUTER ANIMATION HOVER ICI
       }
@@ -232,13 +196,7 @@ header {
       // La marge LR est plus importante sur ce menu que sur les autres.
       margin-left: 8%;
       margin-right: 8%;
-      justify-content: space-between;
-      display: flex;
-      & ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-      }
+      @include list-style;
       &-name {
         line-height: 3em;
       }
@@ -254,20 +212,12 @@ header {
   background-color: $color-bg-palette;
   @include sheet-menu-layout;
   &__title {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 5em;
+    @include sheet__title;
   }
   &__container {
     width: 80%;
     &--header {
-      margin-top: 3em;
-      margin-bottom: 1em;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include sheet__separator;
       &:hover {
         //TODO: AJOUTER ANIMATION HOVER ICI
       }
@@ -280,13 +230,7 @@ header {
       // La marge LR est plus importante sur ce menu que sur les autres.
       margin-left: 5%;
       margin-right: 5%;
-      justify-content: space-between;
-      display: flex;
-      & ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-      }
+      @include list-style;
       &-name {
         line-height: 3em;
       }

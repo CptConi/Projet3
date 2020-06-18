@@ -1,38 +1,41 @@
+//Colors
 $color-green: #579c87;
 $color-yellow: #fdcb46;
-$color-bg-note: #fcdfdb;
-$color-bg-chic: #fff5fe;
-$color-bg-delice: #f9f9f9;
-$color-bg-palette: #fdfffd;
 
+$color-bg-note: #fcdfdb;
 $color-gradient1-note: #f04a5e;
 $color-gradient2-note: #f78f6a;
-
 $color-menu-note: #3c1218;
 
+$color-bg-chic: #fff5fe;
 $color-gradient1-chic: #d8852e;
 $color-gradient2-chic: #905bfd;
 $color-chic1: #c67412;
 $color-chic2: #a56799;
 $color-chic3: #6e4ccc;
 
+$color-bg-delice: #f9f9f9;
 $color-gradient1-delice: #0431df;
 $color-gradient2-delice: #0887fb;
 
+$color-bg-palette: #fdfffd;
 $color-gradient1-palette: #3d9339;
 $color-gradient2-palette: #bfff7e;
 $color-menu-palette: #72bf56;
 
+//Sizes
 $box-w: 250px;
 $box-h: 350px;
 
 $footer-height: 3em;
 
+// Lists, Maps
 $lst_link-menu: "note", "chic", "delice", "palette";
-$lst-ellipsis: 1, 2, 3;
 
+//Animations
+$lst-ellipsis: 1, 2, 3;
 $ellipsis-anim-dur: 0.8s;
 $ellipsis-anim-delay: $ellipsis-anim-dur/8;
 
-$wiggle-anim-dur: 250ms;
-$shake-intensity: 2%;
+$wiggle-anim-dur: 200ms;
+$shake-intensity: 1%;

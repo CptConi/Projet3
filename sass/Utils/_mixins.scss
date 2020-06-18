@@ -22,19 +22,6 @@
   align-items: center;
 }
 
-@mixin typo-note {
-  font-family: "Segoe print", sans-serif;
-  font-weight: bold;
-  font-size: 1.3em;
-  &--dishes-name {
-    font-weight: normal;
-    font-size: 0.8em;
-  }
-  &--dishes-price {
-    font-size: 0.9em;
-  }
-}
-
 @mixin gradient-note {
   background-image: linear-gradient(
     to right,
@@ -80,4 +67,43 @@
     #bfff7e
   );
   @include gradient-font;
+}
+
+@mixin typo-note {
+  font-family: "Segoe print", sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  &--dishes-name {
+    font-weight: normal;
+    font-size: 0.8em;
+  }
+  &--dishes-price {
+    font-size: 0.9em;
+  }
+}
+
+@mixin sheet__title {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+
+@mixin sheet__separator {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin list-style {
+  justify-content: space-between;
+  display: flex;
+  & ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
 }

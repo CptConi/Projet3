@@ -356,7 +356,7 @@ footer ul {
   padding: 0;
 }
 footer li:hover {
-  animation: wiggle 250ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
+  animation: wiggle 200ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
 }
 
 @keyframes ellipsis {
@@ -389,10 +389,10 @@ footer li:hover {
 }
 @keyframes wiggle {
   25% {
-    transform: translateX(2%);
+    transform: translateX(1%);
   }
   75% {
-    transform: translateX(-2%);
+    transform: translateX(-1%);
   }
 }
 .link_note:hover > .content__menu--note > * {
