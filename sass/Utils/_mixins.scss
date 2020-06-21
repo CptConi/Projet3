@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
+  margin: 0.5em;
 }
 
 @mixin gradient-font {
@@ -11,15 +12,36 @@
   color: transparent;
 }
 
-@mixin sheet-menu-layout {
-  width: 1120px;
-  height: 1600px;
+@mixin sheet-menu-layout($S_BP_height: $sheet-h-S) {
+  width: $sheet-w-XL;
+  height: $sheet-h-XL;
+  @media (max-width: $sheet-w-XL*1.1) {
+    width: $sheet-w-L;
+    height: $sheet-h-L;
+  }
+  @media (max-width: $sheet-w-L*1.1) {
+    width: $sheet-w-M;
+    height: $sheet-h-M;
+  }
+  @media (max-width: $sheet-w-M*1.1) {
+    width: $sheet-w-S;
+    height: $S_BP_height;
+  }
   margin: auto;
   margin-bottom: $footer-height + 1em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
+  // justify-content: space-between;
   flex-direction: column;
   align-items: center;
+}
+
+@mixin sheet__title($marginbot: 0%) {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 12%;
+  margin-bottom: $marginbot;
 }
 
 @mixin gradient-note {
@@ -69,20 +91,18 @@
   @include gradient-font;
 }
 
-@mixin sheet__title($marginbot: 0em) {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 8em;
-  margin-bottom: $marginbot;
-}
-
 @mixin sheet__separator {
   margin-top: 3em;
   margin-bottom: 1em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media (max-width: $sheet-w-L*1.1) {
+    margin-top: 2em;
+  }
+  @media (max-width: $sheet-w-M*1.1) {
+    margin-top: 1.5em;
+  }
   &-title {
     position: relative;
     &:hover:after {
@@ -110,5 +130,28 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+  }
+}
+
+@mixin fontSizeToEachBP($pFontSize) {
+  @for $i from 4 to 1 {
+    $temp_sheet-size: map-get($map-sheet-sizes, $i);
+    @media (max-width: $temp_sheet-size * 1.1) {
+      @if ($i > 2) {
+        font-size: $pFontSize * (($i - 1)/4);
+      }
+    }
+  }
+}
+
+@mixin grid-template {
+  &-name {
+    display: grid;
+    grid-template-columns: $grid-layout;
+    line-height: 3em;
+    width: 100%;
+  }
+  .price {
+    text-align: right;
   }
 }

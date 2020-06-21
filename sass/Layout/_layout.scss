@@ -12,21 +12,34 @@ header {
 }
 
 .content {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  @media (max-width: 1024px) {
+    margin: 1em 7.2em;
+  }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    margin: 1em 11em;
+  }
+  @media (max-width: 768px) {
+    margin: 1em 6em;
+  }
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   .content__menu {
-    width: $box-w;
-    height: $box-h;
+    width: $miniature-1440-w;
+    height: $miniature-1440-h;
     margin-top: 1em;
     margin-bottom: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    @media (max-width: 1440px) {
-      min-width: $box-w;
+    @media (max-width: 1024px) {
+      width: $miniature-1024-w;
+      height: $miniature-1024-h;
     }
+    @media (max-width: 768px) {
+      width: $miniature-768-w;
+      height: $miniature-768-h;
+    }
+
     &--note {
       background-color: $color-bg-note;
       @include content__menu-layout;
@@ -51,12 +64,13 @@ header {
 
 .btn {
   text-align: center;
+  margin-top: 4em;
+  margin-bottom: $footer-height + 2em;
   .prochainement {
     width: 180px;
     padding: 0.4em 1.6em;
     border-radius: 8px;
     margin: auto;
-    margin-bottom: 20%;
     background-color: $color-green;
     &:hover {
       border: $color-green 2px solid;
@@ -112,23 +126,20 @@ header {
       @include sheet__separator;
       img {
         object-fit: contain;
-        width: 300px;
+        width: $img-w;
+        @media (max-width: $sheet-w-M*1.1) {
+          width: $img-w * 0.75;
+        }
       }
     }
     &--dishes {
-      @include list-style;
-      &-name {
-        line-height: 3em;
-      }
-      &-price {
-        line-height: 2.9em;
-        text-align: right;
-      }
+      @include grid-template;
     }
   }
   &__footer {
     display: flex;
     flex-direction: row;
+
     margin-top: 3em;
     .fab {
       @include gradient-note;
@@ -144,63 +155,58 @@ header {
 
 .sheet-chic {
   background-color: $color-bg-chic;
-  @include sheet-menu-layout;
+  @include sheet-menu-layout(800px);
   &__title {
-    @include sheet__title;
+    @include sheet__title(2em);
   }
   &__container {
     width: 80%;
     &--header {
       @include sheet__separator;
       img {
-        width: 300px;
+        width: $img-w;
+        @media (max-width: $sheet-w-M*1.1) {
+          width: $img-w * 0.6;
+        }
       }
     }
     &--dishes {
-      @include list-style;
-      &-name {
-        line-height: 3em;
-      }
-      &-price {
-        line-height: 2.65em;
-        text-align: right;
-      }
+      @include grid-template;
     }
   }
 }
 
 .sheet-delice {
   background-color: $color-bg-delice;
-  @include sheet-menu-layout;
+  @include sheet-menu-layout(700px);
   &__title {
-    @include sheet__title;
+    @include sheet__title(2em);
   }
   &__container {
     width: 80%;
     &--header {
       @include sheet__separator;
       img {
-        width: 300px;
+        width: $img-w;
+        @media (max-width: $sheet-w-M*1.1) {
+          width: $img-w * 0.7;
+        }
       }
     }
     &--dishes {
       // La marge LR est plus importante sur ce menu que sur les autres.
       margin: 0 5em;
-      @include list-style;
-      &-name {
-        line-height: 3.6em;
+      @media (max-width: $sheet-w-M*1.1) {
+        margin: 0 0;
       }
-      &-price {
-        line-height: 2.8em;
-        text-align: right;
-      }
+      @include grid-template;
     }
   }
 }
 
 .sheet-palette {
   background-color: $color-bg-palette;
-  @include sheet-menu-layout;
+  @include sheet-menu-layout(850px);
   &__title {
     @include sheet__title;
   }
@@ -209,7 +215,10 @@ header {
     &--header {
       @include sheet__separator;
       img {
-        width: 300px;
+        width: $img-w;
+        @media (max-width: $sheet-w-M*1.1) {
+          width: $img-w * 0.75;
+        }
         object-fit: contain;
       }
     }
@@ -217,14 +226,7 @@ header {
       // La marge LR est plus importante sur ce menu que sur les autres.
       margin-left: 5%;
       margin-right: 5%;
-      @include list-style;
-      &-name {
-        line-height: 3em;
-      }
-      &-price {
-        line-height: 2.65em;
-        text-align: right;
-      }
+      @include grid-template;
     }
   }
 }

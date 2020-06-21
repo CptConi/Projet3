@@ -24,18 +24,64 @@ $color-gradient2-palette: #bfff7e;
 $color-menu-palette: #72bf56;
 
 //Sizes
-$box-w: 250px;
-$box-h: 350px;
-
+//Globals
 $footer-height: 3em;
+//Index.html
+$miniature-1440-w: 300px;
+$miniature-1440-h: 1.5 * $miniature-1440-w;
 
-// Lists, Maps
-$lst_link-menu: "note", "chic", "delice", "palette";
+$miniature-1024-w: 250px;
+$miniature-1024-h: 1.5 * $miniature-1024-w;
 
+$miniature-768-w: 180px;
+$miniature-768-h: 1.5 * $miniature-768-w;
+
+$miniature-320-w: 100px;
+$miniature-320-h: 1.5 * $miniature-320-w;
+
+//Sheets - global
+$img-w: 33%;
+//Ratio L > H d'une feuille A4:
+$ratioA4: 1.41;
+$ratioL: 3/4;
+$ratioM: 2/4;
+$ratioS: 1/4;
+$map-sheet-sizes: (
+  1: 300px,
+  2: 574px,
+  3: 847px,
+  4: 1120px,
+);
+
+$sheet-w-XL: map-get($map-sheet-sizes, 4);
+$sheet-h-XL: $sheet-w-XL * $ratioA4;
+$sheet-w-L: map-get($map-sheet-sizes, 3);
+$sheet-h-L: $sheet-w-L * $ratioA4;
+$sheet-w-M: map-get($map-sheet-sizes, 2);
+$sheet-h-M: $sheet-w-M * $ratioA4;
+$sheet-w-S: map-get($map-sheet-sizes, 1);
+$sheet-h-S: 1000px;
+
+$sheet-font-title: 4em;
+$sheet-font-separator: 1.8em;
+$sheet-font-dishes: 1.2em;
+$sheet-font-prices: 1.4em;
+
+$grid-layout: 85% 15%;
 //Animations
+$lst_link-menu: "note", "chic", "delice", "palette";
 $lst-ellipsis: 1, 2, 3;
 $ellipsis-anim-dur: 1.1s;
 $ellipsis-anim-delay: $ellipsis-anim-dur/8;
 
 $wiggle-anim-dur: 200ms;
 $shake-intensity: 1%;
+
+/*
+@media (max-width: $sheet-w-XL*1.1) {
+}
+@media (max-width: $sheet-w-L*1.1) {
+}
+@media (max-width: $sheet-w-M*1.1) {
+}
+*/

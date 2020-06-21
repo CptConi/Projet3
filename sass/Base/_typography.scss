@@ -35,17 +35,27 @@ a {
         font-family: "Croissant-One", sans-serif;
         @include gradient-chic;
         font-size: 1.1em;
+        @media (max-width: 768px) {
+          padding-top: 2em;
+          font-size: 0.8em;
+        }
       }
       & h3 {
         font-weight: bold;
         font-size: 1.5em;
         color: $color-gradient1-chic;
+        @media (max-width: 768px) {
+          font-size: 1.4em;
+        }
       }
     }
     &--delice {
       & h2 {
         font-family: "dancing-Script", sans-serif;
         @include gradient-delice;
+        @media (max-width: 768px) {
+          font-size: 1.2em;
+        }
       }
       & h3 {
         font-family: "Segoe print", sans-serif;
@@ -56,6 +66,9 @@ a {
       & h2 {
         font-family: "Kaushan-Script", sans-serif;
         @include gradient-palette;
+        @media (max-width: 768px) {
+          font-size: 1.2em;
+        }
       }
       & h3 {
         font-family: "Segoe print", sans-serif;
@@ -81,9 +94,11 @@ a {
   &__title {
     .fab {
       font-size: 8em;
+      @include fontSizeToEachBP(8em);
     }
     h2 {
-      font-size: 4em;
+      font-size: $sheet-font-title;
+      @include fontSizeToEachBP($sheet-font-title);
       font-family: "Devonshire-Regular", sans-serif;
       font-weight: normal;
       color: $color-menu-note;
@@ -93,24 +108,30 @@ a {
     font-family: "Segoe print", sans-serif;
     &--header-title {
       font-weight: bold;
-      font-size: 1.8em;
+      font-size: $sheet-font-separator;
+      @include fontSizeToEachBP($sheet-font-separator);
     }
-    &--dishes-name {
-      font-size: 1.2em;
-    }
-    &--dishes-price {
-      font-size: 1.3em;
-      font-weight: bold;
+    &--dishes {
+      &-name {
+        font-size: $sheet-font-dishes;
+        @include fontSizeToEachBP($sheet-font-dishes);
+      }
+      .price {
+        font-weight: bolder;
+        font-size: $sheet-font-prices;
+        @include fontSizeToEachBP($sheet-font-prices);
+      }
     }
   }
   &__footer {
     font-size: 1.7em;
+    @include fontSizeToEachBP(1.7em);
     font-family: "Devonshire-Regular", sans-serif;
     font-weight: normal;
     color: $color-menu-note;
-    height: 100px;
     .fab {
       font-size: 2.5em;
+      @include fontSizeToEachBP(2.5em);
     }
   }
 }
@@ -123,32 +144,37 @@ a {
       font-family: "Croissant-One", sans-serif;
       font-weight: normal;
       @include gradient-chic(right bottom);
-      font-size: 3em;
+      font-size: $sheet-font-title - 1em;
+      @include fontSizeToEachBP($sheet-font-title - 1em);
     }
   }
   &__container {
     font-family: "Sumana", sans-serif;
     & .--chic-color1 {
       color: $color-chic1;
-      font-size: 1.5em;
+      font-size: $sheet-font-separator - 0.3em;
+      @include fontSizeToEachBP($sheet-font-separator - 0.3em);
       font-weight: bold;
     }
     & .--chic-color2 {
       color: $color-chic2;
-      font-size: 1.5em;
+      font-size: $sheet-font-separator - 0.3em;
+      @include fontSizeToEachBP($sheet-font-separator - 0.3em);
       font-weight: bold;
     }
     & .--chic-color3 {
       color: $color-chic3;
-      font-size: 1.5em;
-      font-weight: bold;
+      font-size: $sheet-font-separator - 0.3em;
+      @include fontSizeToEachBP($sheet-font-separator - 0.3em);
     }
     &--dishes {
       &-name {
-        font-size: 1.2em;
+        font-size: $sheet-font-dishes;
+        @include fontSizeToEachBP($sheet-font-dishes);
       }
-      &-price {
-        font-size: 1.3em;
+      .price {
+        font-size: $sheet-font-prices;
+        @include fontSizeToEachBP($sheet-font-prices);
       }
     }
   }
@@ -159,21 +185,25 @@ a {
     h2 {
       font-family: "dancing-Script", sans-serif;
       font-weight: normal;
-      font-size: 5em;
+      font-size: $sheet-font-title + 0.5em;
+      @include fontSizeToEachBP($sheet-font-title + 0.5em);
     }
     @include gradient-delice;
   }
   &__container {
     font-family: "Segoe print", sans-serif;
     &--header {
-      font-size: 1.4em;
+      font-size: $sheet-font-separator - 0.4em;
+      @include fontSizeToEachBP($sheet-font-separator - 0.4em);
     }
     &--dishes {
       &-name {
-        font-size: 1.2em;
+        font-size: $sheet-font-dishes;
+        @include fontSizeToEachBP($sheet-font-dishes);
       }
-      &-price {
-        font-size: 1.5em;
+      .price {
+        font-size: $sheet-font-prices + 0.1em;
+        @include fontSizeToEachBP($sheet-font-prices + 0.1em);
       }
     }
   }
@@ -184,21 +214,27 @@ a {
     h2 {
       font-family: "Kaushan-Script", sans-serif;
       font-weight: normal;
-      font-size: 6em;
+      font-size: $sheet-font-title + 2em;
+      @include fontSizeToEachBP($sheet-font-title + 1em);
     }
     @include gradient-palette;
   }
   &__container {
     font-family: "Segoe print", sans-serif;
     &--header-title {
-      font-size: 1.3em;
+      font-size: $sheet-font-separator - 0.5em;
+      @include fontSizeToEachBP($sheet-font-separator - 0.5em);
     }
-    &--dishes-name {
-      font-size: 1.2em;
-    }
-    &--dishes-price {
-      font-size: 1.4em;
-      font-weight: bold;
+    &--dishes {
+      &-name {
+        font-size: $sheet-font-dishes;
+        @include fontSizeToEachBP($sheet-font-dishes);
+      }
+      .price {
+        font-size: $sheet-font-prices;
+        @include fontSizeToEachBP($sheet-font-prices);
+        font-weight: bold;
+      }
     }
   }
 }
