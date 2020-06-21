@@ -576,6 +576,16 @@ footer li:hover {
   animation: wiggle 200ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
 }
 
+.cgv {
+  margin: 2em;
+  margin-bottom: 5em;
+  font-family: "Roboto", sans-serif;
+}
+.cgv .hidden_link {
+  text-decoration: none;
+  color: black;
+}
+
 @keyframes ellipsis {
   0% {
     transform: scale(1, 1) translateY(0);
